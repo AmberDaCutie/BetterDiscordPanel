@@ -10,11 +10,11 @@ function contentReplacement(content, links) {
       .replace(/\n/g, '<br>')
       .replace(
           /(&lt;a:(.*?):(\d{18})&gt;)/g,
-          `<img title="\$2" alt="" class="smallEmojiImg" src="https://cdn.discordapp.com/emojis/\$3" onclick="addText('\$1')">`,
+          `<img title="\$2" alt="" class="smallEmojiImg" src="/\$3" onclick="addText('\$1')">`,
       )
       .replace(
           /(&lt;:(.*?):(\d{18})&gt;)/g,
-          `<img title="\$2" alt="" class="smallEmojiImg" src="https://cdn.discordapp.com/emojis/\$3" onclick="addText('\$1')">`,
+          `<img title="\$2" alt="" class="smallEmojiImg" src="http://hcdn.sys42.net/emojis/\$3" onclick="addText('\$1')">`,
       )
       .replace(/\[(.*)]\((.*)\)/g, `<a href="\$2" target="_blank">\$1</a>`);
 
