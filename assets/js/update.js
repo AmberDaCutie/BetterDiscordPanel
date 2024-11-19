@@ -40,13 +40,13 @@ function versionCompare(current, latest, options) {
       errorNotification('You have a version that does not exist on GitHub!');
       return 'You have a version that does not exist on GitHub!';
     } else {
-      successNotification('<a href=\'https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2\' target=\'_blank\'>New update available!</a>');
+      successNotification('<a href=\'https://github.com/AmberDaCutie/BetterDiscordPanel/releases/tag/2.6.2\' target=\'_blank\'>New update available!</a>');
       return 'New update available!';
     }
   }
 
   if (currentparts.length != latestparts.length) {
-    successNotification('<a href=\'https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2\' target=\'_blank\'>New update available!</a>');
+    successNotification('<a href=\'https://github.com/AmberDaCutie/BetterDiscordPanel/releases/tag/2.6.2\' target=\'_blank\'>New update available!</a>');
     return 'New update available!';
   }
 
@@ -70,11 +70,11 @@ $(document).ready(function() {
   };
 
   const client = new HttpClient();
-  client.get('https://api.github.com/repos/SanjaySunil/BetterDiscordPanel/releases/latest',
+  client.get('https://api.github.com/repos/AmberDaCutie/BetterDiscordPanel/releases/latest',
       function(response) {
         const data = JSON.parse(response);
         const latestVersion = data.tag_name;
-        infoNotification('<a href="https://github.com/SanjaySunil/BetterDiscordPanel" target="blank" class="welcome-tag">Welcome to BetterDiscordPanel v' + version + '! <iframe src="https://ghbtns.com/github-btn.html?user=SanjaySunil&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>');
+        infoNotification('<a href="https://github.com/AmberDaCutie/BetterDiscordPanel" target="blank" class="welcome-tag">Welcome to BetterDiscordPanel v' + version + '! <iframe src="https://ghbtns.com/github-btn.html?user=AmberDaCutie&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>');
         betterDiscordConsole(`BetterDiscordPanel v${version}`, 'lightblue');
         betterDiscordConsole(`Latest Version: v${latestVersion}`, 'lightblue');
         console.log(versionCompare(version, latestVersion));
